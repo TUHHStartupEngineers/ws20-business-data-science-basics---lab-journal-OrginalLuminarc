@@ -4,6 +4,7 @@ author: "Lukas Schwarz"
 date: "2020-11-18"
 output:
   html_document:
+    pandoc_args: ["+RTS", "-M1024M", "-RTS"]
     toc: true
     toc_float: true
     collapsed: false
@@ -25,8 +26,7 @@ This is an `.Rmd` file. It is plain text with special features. Any time you wri
 Last compiled: `r Sys.Date()`
 
 ## Script
-
-```{r}
+```{r plot1, fig.width=10, fig.height=7}
 # Data Science at TUHH ------------------------------------------------------
 # SALES ANALYSIS ----
 
@@ -53,8 +53,7 @@ bike_orderlines_wrangled_tbl <- bike_orderlines_joined_tbl %>%
   separate(col = location,
            into = c("city", "state"),
            sep = ", ")
-```
-```{r plot1, fig.width=10, fig.height=7}
+
 # 6.0 Business Insights ----
 # 6.1 Sales by state ----
 # Step 1 - Manipulate
@@ -90,8 +89,7 @@ bike_orders_state %>%
     y = "Revenue"
   ) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
-```
-```{r plot2, fig.width=10, fig.height=7}
+
 # 6.2 Sales by Year and Category 2 ----
 # Step 1 - Manipulate
 bike_orders_state_year <- bike_orderlines_wrangled_tbl %>%
@@ -126,10 +124,6 @@ bike_orders_state_year %>%
   )
 
 ```
-
-### Würfel
-
-
 
 # My second post (note the order)
 
