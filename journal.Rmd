@@ -128,7 +128,9 @@ bike_orders_state_year %>%
 # Data Acquisition
 
 Last compiled: `r Sys.Date()`
-##API
+
+## API
+
 ```{r API}
 library(tidyverse)
 library(httr)
@@ -142,8 +144,10 @@ list =  resp %>%
 ice_pokemon <- list[["pokemon"]] 
 ice_pokemon %>% head(n = 10)
 ```
-##Web Scraping
-```{r data acquisition, echo=TRUE}
+
+## Web Scraping
+
+```{r data acquisition}
 library(tidyverse)
 library(rvest)
 library(stringr)
@@ -182,7 +186,7 @@ get_bike_data <- function(url) {
     html_text() %>%
     str_extract(pattern = "[0-9]+") %>% 
     as.numeric()%>%
-    enframe(name = "position", value = "price(\200)") %>%
+    enframe(name = "position", value = "price euro") %>%
     left_join(bike_name_tbl) %>%
     left_join(bike_url_tbl)
 }
@@ -192,8 +196,8 @@ bike_category_url_vec <- bike_category_tbl %>%
 
 bike_data_lst <- map(bike_category_url_vec, get_bike_data)
 
-bike_data_tbl_all <- bind_rows(bike_data_lst) %>%
-  head(10)
+bike_data_tbl_all <- bind_rows(bike_data_lst)
+bike_data_tbl_all %>% head(n = 10)
 ```
 
 # Adding R stuff

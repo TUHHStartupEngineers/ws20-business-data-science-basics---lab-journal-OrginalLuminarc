@@ -46,5 +46,5 @@ bike_category_url_vec <- bike_category_tbl %>%
 
 bike_data_lst <- map(bike_category_url_vec, get_bike_data)
 
-bike_data_tbl_all <- bind_rows(bike_data_lst) %>%
-  head(10)
+bike_data_tbl_all <- bind_rows(bike_data_lst)
+bike_data_tbl_all %>%  head(n = 10)
