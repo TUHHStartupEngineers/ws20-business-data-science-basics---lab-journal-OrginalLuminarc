@@ -37,3 +37,21 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+DS_101/02_data_wrangling/patent_assignee.tsv
+DS_101/02_data_wrangling/patent.tsv.zip
+DS_101/02_data_wrangling/patent.tsv
+DS_101/02_data_wrangling/loan_data/Performance_2019Q1.txt
+DS_101/02_data_wrangling/loan_data/Acquisition_2019Q1.txt
+DS_101/02_data_wrangling/assignee.tsv
+DS_101/02_data_wrangling/__MACOSX/loan_data/._Performance_2019Q1.txt
+DS_101/02_data_wrangling/uspc.tsv
+docs/DS_101/02_data_wrangling/__MACOSX/loan_data/._Acquisition_2019Q1.txt
+docs/DS_101/02_data_wrangling/__MACOSX/loan_data/._Performance_2019Q1.txt
+docs/DS_101/02_data_wrangling/loan_data/Acquisition_2019Q1.txt
+docs/DS_101/02_data_wrangling/loan_data/Performance_2019Q1.txt
+docs/DS_101/02_data_wrangling/patent.tsv
+docs/DS_101/02_data_wrangling/patent.tsv.zip
+docs/DS_101/02_data_wrangling/patent_assignee.tsv
+docs/DS_101/02_data_wrangling/uspc.tsv
+docs/test_df.csv
+DS_101/02_data_wrangling/__MACOSX/loan_data/._Acquisition_2019Q1.txt
